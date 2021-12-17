@@ -1,0 +1,35 @@
+std::string reverse_words(std::string str)
+{
+  char j;
+  int a;
+  int b;
+  for (int i=0;i>-1;i++) {
+    a=i;
+    if ((str[i]==' ') || (i==str.length())) {break;}
+  }
+  for (int i=0;i<a/2;i++) {
+    j=str[a-i-1];
+    str[a-i-1]=str[i];
+    str[i]=j;
+  }
+  for (int i=a+1;i<str.length();i++) {
+    if (str[i]==' ') {
+      b=i;
+      for (int l=a+1;l<(b+a+1)/2;l++) {
+         j=str[b-l+a];
+         str[b-l+a]=str[l];
+         str[l]=j;
+       }
+      a=i;
+    }
+  }
+  if (str[str.length()-1] !=' ') {
+     b=str.length();
+      for (int l=a+1;l<(b+a+1)/2;l++) {
+         j=str[b-l+a];
+         str[b-l+a]=str[l];
+         str[l]=j;
+       }
+  }
+  return str;
+}
