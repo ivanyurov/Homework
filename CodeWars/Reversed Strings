@@ -1,0 +1,14 @@
+#include <string>
+using namespace std ; 
+
+string reverseString (string str )
+{
+  char a;
+  int b=str.size();
+  for (int i = 1; i <= b / 2; i++) {
+    a=str[i-1];
+    str[i-1]=str[b-i];
+    str[b-i]=a;
+  }
+  return str;
+}
