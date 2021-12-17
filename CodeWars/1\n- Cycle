@@ -1,0 +1,12 @@
+int cycle(int n) {
+  if (n%2==0 || n%5==0) return -1;
+  int a=0;
+  int b=10%n;
+  int c=10%n;
+  do
+  {
+    b=(b*10)%n;
+    ++a;
+    if (b==c) return a;
+  } while (true);
+}
