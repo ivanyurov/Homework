@@ -1,0 +1,23 @@
+bool narcissistic( int value ){
+  int a=value;
+  int d=1;
+  int c=1;
+  int b;
+  int res=0;
+  while (a>9) 
+  {
+    a=a/10;
+    ++d;
+  }
+  a=value;
+  if (d==1) return true;
+  for (int i=1; i<=d; ++i)
+  {
+    b=a%10;
+    a=a/10;
+    for (int j=1; j<=d; ++j) c*=b;
+    res+=c;
+    c=1;
+  }
+  if (res==value) return true; else return false;
+}
