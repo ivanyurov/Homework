@@ -1,0 +1,17 @@
+#include <vector>
+
+long sumTwoSmallestNumbers(std::vector<int> numbers)
+{
+  int a;
+  for (int i=0; i<numbers.size()-1; ++i)
+  {
+    for (int j=0; j<numbers.size()-1; ++j)
+      if (numbers[j]>numbers[j+1])
+        {
+        a=numbers[j];
+        numbers[j]=numbers[j+1];
+        numbers[j+1]=a;
+        }
+  }
+  return (long long)numbers[0]+numbers[1];
+}
