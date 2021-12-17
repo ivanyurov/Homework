@@ -1,0 +1,11 @@
+bool is_isogram(std::string str) {
+  char x=true;
+  for (int i=0;i<str.length();++i)
+    {
+    for (int j=i+1;j<str.length();++j)
+      {
+      if ((str[i]==str[j])||((int)str[i]-(int)str[j]==32)||((int)str[i]-(int)str[j]==-32)) x=false;
+      }
+    }
+  return x;
+}
