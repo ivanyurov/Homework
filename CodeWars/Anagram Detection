@@ -1,0 +1,25 @@
+#include <string>
+
+bool isAnagram(std::string test, std::string original){
+  int s;
+  int x=test.length();
+  if (test.length()!=original.length()) return false;
+  else 
+    {
+    for (int i = 0; i < x; ++i)
+      {
+      s=test.length();
+      for (int j = 0; j < s; ++j)
+        {
+        if ((test[0] == original[j]) || ((int)test[0] - (int)original[j] == 32) || ((int)test[0] - (int)original[j] == -32))
+          {
+          test.erase(0,1);
+          original.erase(j,1);
+          break;
+          }
+        }
+      }
+    if (test.length()==0) return true;
+    else return false;
+    }
+}
