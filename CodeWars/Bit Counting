@@ -1,0 +1,9 @@
+unsigned int countBits(unsigned long long n){
+  int a=0;
+  while (n>=1)
+    {
+      a=a+n%2;
+      n=n/2;
+    }
+  return a;
+}
