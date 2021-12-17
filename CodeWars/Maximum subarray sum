@@ -1,0 +1,16 @@
+#include <vector>
+
+int maxSequence(const std::vector<int>& arr){
+  long long max=0;
+  long long a=0;;
+  for (int i=0; i<arr.size(); ++i)
+    {
+    for (int j=i; j<arr.size(); ++j)
+      {
+      a=a+arr[j];
+      if (a>max) max=a;
+      }
+    a=0;
+    }
+  return max;
+}
