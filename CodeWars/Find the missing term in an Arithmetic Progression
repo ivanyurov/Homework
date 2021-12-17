@@ -1,0 +1,13 @@
+static long findMissing(std::vector<long> list){
+  for (int i=1; i<list.size()-1; ++i)
+  {
+    if (list[i]-list[i+1]<0){
+      if (list[i]-list[i-1]<list[i+1]-list[i]) return list[i]+list[i]-list[i-1];
+      if (list[i]-list[i-1]>list[i+1]-list[i]) return list[i]+list[i]-list[i+1];
+    }
+    if (list[i]-list[i+1]>0){
+      if (list[i]-list[i-1]>list[i+1]-list[i]) return list[i]+list[i]-list[i-1];
+      if (list[i]-list[i-1]<list[i+1]-list[i]) return list[i]+list[i]-list[i+1];
+    }
+  }
+}
