@@ -1,0 +1,14 @@
+std::string get_middle(std::string input) 
+{
+  std::string a;
+  if (input.length()%2==1)
+    {
+    a=a+input[input.length()/2];
+    return a;
+    }
+  else
+    {
+    a=a+input[input.length()/2-1]+input[input.length()/2];
+    return a;
+    }
+}
