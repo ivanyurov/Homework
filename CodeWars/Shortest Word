@@ -1,0 +1,23 @@
+#include <string>
+int find_short(std::string str)
+{
+  int min=0;
+  int a=0;
+  int b=0;
+  for (int i = 0; i<str.length(); ++i)
+    {
+    ++a;
+    if (str[i]!=' ') ++min;
+    if ((str[i]==' ')&&(min>0)) break;
+    }
+  for (int i = a; i<str.length(); ++i)
+    {
+    if (str[i]!=' ') ++b;
+    if (((str[i]==' ')||(i==str.length()-1))&&(b>0)) 
+      {
+      if (b<min) min=b;
+      b=0;
+      }
+    }
+  return min;
+}
