@@ -1,0 +1,10 @@
+class HiddenSeq
+{
+    public:
+    static unsigned long long fcn(int n)
+    {
+      long long a=1;
+      for (int i=1; i<=n; ++i) a*=2;
+      return a;
+    }
+};
