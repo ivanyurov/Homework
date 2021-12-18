@@ -1,13 +1,14 @@
 @echo off
+chcp 1251 > NUL
 md %1 & cd %1
 md "AlgebraAndGeometry" "MathAnalysis" "DiscreteMath" "BasicsOfProgramming"
-cd "AlgebraAndGeometr" && echo "Балыкина Юлия ЕФимовна" > readme.txt. && echo "Начало занятий:%time%" >>readme.txt
+cd "AlgebraAndGeometr" && echo "Балыкина Юлия ЕФимовна" > readme.txt. && echo "Начало занятий:%date%" >>readme.txt
 cd..
-cd "MathAnalysis" && echo "Мышков Станислав Константинович" > readme.txt. && echo "Начало занятий:%time%" >>readme.txt
+cd "MathAnalysis" && echo "Мышков Станислав Константинович" > readme.txt. && echo "Начало занятий:%date%" >>readme.txt
 cd..
-cd "DiscreteMath" && echo "Воронкова Ева Боруховна" > readme.txt. && echo "Начало занятий:%time%" >>readme.txt
+cd "DiscreteMath" && echo "Воронкова Ева Боруховна" > readme.txt. && echo "Начало занятий:%date%" >>readme.txt
 cd..
-cd "BasicsOfProgramming" && echo "Погожев Сергей Владимирович" > readme.txt. && echo "Начало занятий:%time%" >>readme.txt
+cd "BasicsOfProgramming" && echo "Погожев Сергей Владимирович" > readme.txt. && echo "Начало занятий:%date%" >>readme.txt
 cd..
 copy "op.bat" "semestr1"
 copy "algem.bat" "semestr1"
