@@ -180,7 +180,7 @@ void randMatrix(double** matrix,
             matrix[r][c] = ((maxval-minval)*rand()) / RAND_MAX + minval;
 }
 
-double** multMatrix(double lambda, double** M, size_t rows, size_t cols)
+double** multMatrixConst(double lambda, double** M, size_t rows, size_t cols)
 {
         for (size_t r = 0; r < rows; ++r)
             for (size_t c = 0; c < cols; ++c)
@@ -219,7 +219,7 @@ double** multMatrix(double** A, double** B, double** C, size_t rowsA, size_t col
     return C;
 }
 
-double& maximumMatrix(double** matrix, size_t rows, size_t cols)
+double& findMaximum(double** matrix, size_t rows, size_t cols)
 {
     double maximum = **matrix;
     size_t r_max = 0;
