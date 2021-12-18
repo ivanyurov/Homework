@@ -60,7 +60,7 @@ double** minusMatrix(double** A, double** B, size_t rows, size_t cols);
 
 double** multMatrix(double** A, double** B, double** C, size_t rowsA, size_t colsA);
 
-double& maximumMatrix(double** matrix, size_t rows, size_t columns);
+double& findMaximum(double** matrix, size_t rows, size_t columns);
 
 double det(double** M, size_t size);
 
