@@ -1,0 +1,3 @@
+@echo off
+cd "AlgebraAndGeometry" && echo "Hello_world".> %date%.log
+cd..
