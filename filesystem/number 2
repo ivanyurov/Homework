@@ -1,0 +1,3 @@
+@echo off
+cd "BasicsOfProgramming" && echo "Hi". >%date%.log
+cd..
