@@ -1,7 +1,6 @@
 void shiftArray(int A[], int n, int k)
 {
     int a;
-    int b;
     for (int i = 0; i < k; ++i)
     {
         a = A[0];
