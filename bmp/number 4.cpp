@@ -19,5 +19,6 @@ void sharpness(char const* input)
     deleteRgbImg(image_2);
     deleteRgbImg(image_1);
     deleteRgbImg(image);
+    for (int i = 0; i < 3; ++i) delete[] kernel[i];
     delete[] kernel;
 }
