@@ -19,3 +19,4 @@ void grayFilter(const char* input, const char* output);
 RgbImg convolution(RgbImg const& img, size_t kernel_size);
 RgbImg convolution(RgbImg const& img, size_t kernel_size, double** kernel);
 RgbImg contours(RgbImg const& img);
+void sharpness(char const* input);
