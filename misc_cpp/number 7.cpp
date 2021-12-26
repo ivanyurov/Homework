@@ -1,18 +1,24 @@
-#include<cmath>
+#include <cmath>
 int main()
 {
 	long double b;
-	int a = 0;
+	long long a = 0;
 	int r;
+	double p = 3.14159265358979323846;
 	std::cin >> r;
-	for (int i = r; i >= -r; --i)
+	if (r <= 10000)
 	{
-		for (int j = -r; j <= r; ++j)
+		for (int i = r; i > 0; --i)
 		{
-			b = sqrt(i * i + j * j);
-			if (b <= r) ++a;
+			for (int j = 1; j <= r; ++j)
+			{
+				b = sqrt(i * i + j * j);
+				if (b <= r) ++a;
+			}
 		}
+		a = a * 4 + r * 4 + 1;
 	}
+	else a = (long long)r * r * p;
 	std::cout << a;
 	system("pause");
 	return 0;
