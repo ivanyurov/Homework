@@ -20,3 +20,4 @@ RgbImg convolution(RgbImg const& img, size_t kernel_size);
 RgbImg convolution(RgbImg const& img, size_t kernel_size, double** kernel);
 RgbImg contours(RgbImg const& img);
 void sharpness(char const* input);
+void medFilter(int n, const char* input);
