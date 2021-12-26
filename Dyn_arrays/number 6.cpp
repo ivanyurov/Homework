@@ -21,7 +21,7 @@ int main()
 	{
 		for (int i = 0; i < n; ++i)
 		{
-			mass[i][j] = rand();
+			mass[i][j] = (long long)rand()*100000/32767;
 			if (mass[i][j] > max) max = mass[i][j];
 		}
 	}
